@@ -10,22 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d4af21b-c03c-42e3-b723-3401a798f760" name="Default Changelist" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/inventory/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/templates/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/templates/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/templates/registration/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOMEnVentory/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/HOMEnVentory/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HOMEnVentory/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/HOMEnVentory/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="5d4af21b-c03c-42e3-b723-3401a798f760" name="Default Changelist" comment="Added templates and user creation." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595199365521</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added templates and user creation.">
+      <created>1595812475725</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1595812475725</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -129,7 +121,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="Added templates and user creation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added templates and user creation." />
   </component>
   <component name="WindowStateProjectService">
     <state x="2038" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595175965403">
