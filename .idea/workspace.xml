@@ -10,7 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d4af21b-c03c-42e3-b723-3401a798f760" name="Default Changelist" comment="Added templates and user creation." />
+    <list default="true" id="5d4af21b-c03c-42e3-b723-3401a798f760" name="Default Changelist" comment="Added templates and user creation.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/templates/base.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,7 +43,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/inventory/static/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CodeBlog" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -104,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595812475725</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added templates and user creation.">
+      <created>1595816350281</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1595816350281</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -129,14 +142,18 @@
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
     <state x="2038" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.31.3440.1409@0.31.3440.1409" timestamp="1595175965403" />
+    <state x="562" y="536" width="596" height="402" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595819022011">
+      <screen x="0" y="31" width="3440" height="1409" />
+    </state>
+    <state x="562" y="536" width="596" height="402" key="#com.intellij.fileTypes.FileTypeChooser/0.31.3440.1409@0.31.3440.1409" timestamp="1595819022011" />
     <state x="543" y="470" width="634" height="531" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1595198194486">
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
     <state x="543" y="470" width="634" height="531" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.31.3440.1409@0.31.3440.1409" timestamp="1595198194486" />
-    <state x="1639" y="628" width="450" height="487" key="FileChooserDialogImpl" timestamp="1595198662991">
+    <state x="1639" y="628" width="450" height="487" key="FileChooserDialogImpl" timestamp="1595818683955">
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
-    <state x="1639" y="628" width="450" height="487" key="FileChooserDialogImpl/0.31.3440.1409@0.31.3440.1409" timestamp="1595198662991" />
+    <state x="1639" y="628" width="450" height="487" key="FileChooserDialogImpl/0.31.3440.1409@0.31.3440.1409" timestamp="1595818683955" />
     <state x="697" y="634" width="326" height="203" key="Github.ShareDialog" timestamp="1595198961175">
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
@@ -145,30 +162,30 @@
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
     <state x="572" y="411" width="576" height="650" key="Github.UntrackedFilesDialog/0.31.3440.1409@0.31.3440.1409" timestamp="1595199018070" />
-    <state width="1687" height="501" key="GridCell.Tab.0.bottom" timestamp="1595812367637">
+    <state width="1687" height="500" key="GridCell.Tab.0.bottom" timestamp="1596228682060">
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
-    <state width="1687" height="501" key="GridCell.Tab.0.bottom/0.31.3440.1409@0.31.3440.1409" timestamp="1595812367637" />
-    <state width="1687" height="501" key="GridCell.Tab.0.center" timestamp="1595812367635">
+    <state width="1687" height="500" key="GridCell.Tab.0.bottom/0.31.3440.1409@0.31.3440.1409" timestamp="1596228682060" />
+    <state width="1687" height="500" key="GridCell.Tab.0.center" timestamp="1596228682058">
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
-    <state width="1687" height="501" key="GridCell.Tab.0.center/0.31.3440.1409@0.31.3440.1409" timestamp="1595812367635" />
-    <state width="1687" height="501" key="GridCell.Tab.0.left" timestamp="1595812367634">
+    <state width="1687" height="500" key="GridCell.Tab.0.center/0.31.3440.1409@0.31.3440.1409" timestamp="1596228682058" />
+    <state width="1687" height="500" key="GridCell.Tab.0.left" timestamp="1596228682056">
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
-    <state width="1687" height="501" key="GridCell.Tab.0.left/0.31.3440.1409@0.31.3440.1409" timestamp="1595812367634" />
-    <state width="1687" height="501" key="GridCell.Tab.0.right" timestamp="1595812367636">
+    <state width="1687" height="500" key="GridCell.Tab.0.left/0.31.3440.1409@0.31.3440.1409" timestamp="1596228682056" />
+    <state width="1687" height="500" key="GridCell.Tab.0.right" timestamp="1596228682059">
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
-    <state width="1687" height="501" key="GridCell.Tab.0.right/0.31.3440.1409@0.31.3440.1409" timestamp="1595812367636" />
-    <state x="455" y="470" width="810" height="531" key="Vcs.Push.Dialog.v2" timestamp="1595199284249">
+    <state width="1687" height="500" key="GridCell.Tab.0.right/0.31.3440.1409@0.31.3440.1409" timestamp="1596228682059" />
+    <state x="455" y="470" width="810" height="531" key="Vcs.Push.Dialog.v2" timestamp="1595816411594">
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
-    <state x="455" y="470" width="810" height="531" key="Vcs.Push.Dialog.v2/0.31.3440.1409@0.31.3440.1409" timestamp="1595199284249" />
-    <state x="635" y="648" width="450" height="175" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595812415856">
+    <state x="455" y="470" width="810" height="531" key="Vcs.Push.Dialog.v2/0.31.3440.1409@0.31.3440.1409" timestamp="1595816411594" />
+    <state x="635" y="648" width="450" height="175" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595818735134">
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
-    <state x="635" y="648" width="450" height="175" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.31.3440.1409@0.31.3440.1409" timestamp="1595812415856" />
+    <state x="635" y="648" width="450" height="175" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.31.3440.1409@0.31.3440.1409" timestamp="1595818735134" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

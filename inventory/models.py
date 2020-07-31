@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.urls import reverse
 from django.contrib.auth.models import User
+from django.conf import settings
 
 
 # Create your models here.
@@ -18,6 +19,10 @@ class Category(models.Model):
 
 class Item(models.Model):
     item_name = models.CharField(max_length=50)
+    owner = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE
+    )
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     price = models.IntegerField()
     date_added = models.DateTimeField(auto_now_add=True)
