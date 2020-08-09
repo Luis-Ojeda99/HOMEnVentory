@@ -10,12 +10,30 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d4af21b-c03c-42e3-b723-3401a798f760" name="Default Changelist" comment="Added templates and user creation.">
+    <list default="true" id="5d4af21b-c03c-42e3-b723-3401a798f760" name="Default Changelist" comment="Fixed problem with login.">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/kali.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/templates/registration/logged_out.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/templates/registration/new_password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/templates/registration/new_password_sucessful.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/templates/registration/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/templates/registration/reset_password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/templates/registration/reset_password_email.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/templates/registration/reset_sent.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/templates/user_inventory.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOMEnVentory/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/HOMEnVentory/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/templates/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/templates/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,27 +52,31 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1esRSDpsbnS3WBa055AOverVGqF" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../CodeBlog" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/inventory/static/css" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/inventory/static/img" />
       <recent name="$PROJECT_DIR$/inventory/static/js" />
       <recent name="$PROJECT_DIR$/inventory/static/css" />
       <recent name="$PROJECT_DIR$/inventory/static/scss" />
       <recent name="$PROJECT_DIR$/inventory/static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/inventory/static/css" />
     </key>
   </component>
   <component name="RunManager">
@@ -117,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595816350281</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fixed problem with login.">
+      <created>1596229318800</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1596229318800</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -133,9 +162,11 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initial commit" />
     <MESSAGE value="Added templates and user creation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added templates and user creation." />
+    <MESSAGE value="Fixed problem with login." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed problem with login." />
   </component>
   <component name="WindowStateProjectService">
     <state x="2038" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595175965403">
@@ -150,10 +181,14 @@
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
     <state x="543" y="470" width="634" height="531" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.31.3440.1409@0.31.3440.1409" timestamp="1595198194486" />
-    <state x="1639" y="628" width="450" height="487" key="FileChooserDialogImpl" timestamp="1595818683955">
+    <state x="593" y="484" width="534" height="506" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596244276070">
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
-    <state x="1639" y="628" width="450" height="487" key="FileChooserDialogImpl/0.31.3440.1409@0.31.3440.1409" timestamp="1595818683955" />
+    <state x="593" y="484" width="534" height="506" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.31.3440.1409@0.31.3440.1409" timestamp="1596244276070" />
+    <state x="1639" y="628" width="450" height="487" key="FileChooserDialogImpl" timestamp="1596649664860">
+      <screen x="0" y="31" width="3440" height="1409" />
+    </state>
+    <state x="1639" y="628" width="450" height="487" key="FileChooserDialogImpl/0.31.3440.1409@0.31.3440.1409" timestamp="1596649664860" />
     <state x="697" y="634" width="326" height="203" key="Github.ShareDialog" timestamp="1595198961175">
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
@@ -162,22 +197,22 @@
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
     <state x="572" y="411" width="576" height="650" key="Github.UntrackedFilesDialog/0.31.3440.1409@0.31.3440.1409" timestamp="1595199018070" />
-    <state width="1687" height="500" key="GridCell.Tab.0.bottom" timestamp="1596228682060">
+    <state width="1797" height="307" key="GridCell.Tab.0.bottom" timestamp="1596930462737">
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
-    <state width="1687" height="500" key="GridCell.Tab.0.bottom/0.31.3440.1409@0.31.3440.1409" timestamp="1596228682060" />
-    <state width="1687" height="500" key="GridCell.Tab.0.center" timestamp="1596228682058">
+    <state width="1797" height="307" key="GridCell.Tab.0.bottom/0.31.3440.1409@0.31.3440.1409" timestamp="1596930462737" />
+    <state width="1797" height="307" key="GridCell.Tab.0.center" timestamp="1596930462735">
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
-    <state width="1687" height="500" key="GridCell.Tab.0.center/0.31.3440.1409@0.31.3440.1409" timestamp="1596228682058" />
-    <state width="1687" height="500" key="GridCell.Tab.0.left" timestamp="1596228682056">
+    <state width="1797" height="307" key="GridCell.Tab.0.center/0.31.3440.1409@0.31.3440.1409" timestamp="1596930462735" />
+    <state width="1797" height="307" key="GridCell.Tab.0.left" timestamp="1596930462733">
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
-    <state width="1687" height="500" key="GridCell.Tab.0.left/0.31.3440.1409@0.31.3440.1409" timestamp="1596228682056" />
-    <state width="1687" height="500" key="GridCell.Tab.0.right" timestamp="1596228682059">
+    <state width="1797" height="307" key="GridCell.Tab.0.left/0.31.3440.1409@0.31.3440.1409" timestamp="1596930462733" />
+    <state width="1797" height="307" key="GridCell.Tab.0.right" timestamp="1596930462736">
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
-    <state width="1687" height="500" key="GridCell.Tab.0.right/0.31.3440.1409@0.31.3440.1409" timestamp="1596228682059" />
+    <state width="1797" height="307" key="GridCell.Tab.0.right/0.31.3440.1409@0.31.3440.1409" timestamp="1596930462736" />
     <state x="455" y="470" width="810" height="531" key="Vcs.Push.Dialog.v2" timestamp="1595816411594">
       <screen x="0" y="31" width="3440" height="1409" />
     </state>

@@ -31,14 +31,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'inventory',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'inventory',
     'bootstrap4',
+    'fontawesome',
 ]
 
 MIDDLEWARE = [
@@ -68,6 +69,9 @@ TEMPLATES = [
         },
     },
 ]
+
+# Create User
+AUTH_USER_MODEL = 'inventory.Account'
 
 WSGI_APPLICATION = 'HOMEnVentory.wsgi.application'
 
@@ -121,8 +125,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# Creating a custom user
-AUTH_USER_MODEL = 'inventory.InventoryUser'
+# Allow sending emails to the console
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-LOGIN_REDIRECT_URL = 'index'
-LOGOUT_REDIRECT_URL = 'index'
+LOGIN_REDIRECT_URL = '/'
+
+
