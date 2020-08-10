@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block title %}Manage Account {% endblock %}
+
+{% block content %}
+
+    <div class="container">
+            <div class="card bg-light">
+                <article class="card-body mx-auto" style="max-width: 400px;">
+
+
+                    <form class="form-singin" method="post">
+                        {% csrf_token %}
+                        <h3 class="card-title mt-3 text-center">Manage account</h3>
+
+                        <p class="text-center"><a href="{% url 'user-inventory'%}">Manage your home inventory</a> </p>
+                        <br />
+
+                        <h5>Edit your account information</h5>
+
+                        <br />
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                            </div>
+                            <input type="text" name="username" class="form-control" id="inputUsername"
+                                   placeholder="Username" required autofocus value="{{account_form.initial.username}}">
+                        </div>
+
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                             <span class="input-group-text"> <i class="fa fa-envelope"></i></span>
+                             <input type="email" name="email" id="inputEmail" class="form-control"
+                                    placeholder="Email address" required value="{{account_form.initial.email}}" />
+                            </div>
+                        </div>
+
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-address-card"></i></span>
+                                <input type="text" name="first_name" id="inputFirstName" class="form-control"
+                                    placeholder="First name" required value="{{account_form.initial.first_name}}" />
+                            </div>
+                        </div>
+
+                        <div class="form-group input-group">
+                             <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-id-card "></i></span>
+                                <input type="text" name="last_name" id="inputLastName" class="form-control"
+                                    placeholder="Last name" required value="{{account_form.initial.last_name}}" />
+                             </div>
+                        </div>
+
+                        {% for field in account_form %}
+                            <p>
+                                {% for error in field.errors %}
+                                    <p style="color: red">{{ error }}</p>
+                                {% endfor %}
+                            </p>
+                        {% endfor %}
+
+                        {% if account_form.non_field_errors %}
+                            <div style="color: red">
+                                <p>{{account_form.non_field_errors}}</p>
+                            </div>
+
+                        {% endif %}
+
+                        {% if success_message %}
+                            <p style="color:green; text-align: center;">{{success_message}}</p>
+                        {% endif %}
+
+
+                        <button class="btn btn-primary btn-block" type="submit">Update</button>
+                    </form>
+
+                    <br />
+                    <div class="d-flex flex-column">
+                        <a class="m-auto" href="{% url 'new-password' %}">Change password</a>
+                    </div>
+                </article>
+            </div>
+    </div>
+
+{% endblock %}

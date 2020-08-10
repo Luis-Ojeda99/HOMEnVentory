@@ -1,7 +1,27 @@
 {% extends 'base.html' %}
 
-{% block title %}Inventory {% endblock %}
+{% block title %}Mange Inventory{% endblock %}
 
 {% block content %}
-    Welcome to your personal inventory.
-{% endblock %}
+    <div class="container">
+        <div class="card bg-light">
+            <article class="card-body mx-auto" style="max-width:400 px;">
+                <h2 class="card-title mt-3 text-center">Manage Inventory</h2>
+                <p class="text-center"><a href="{% url 'account-management'%}">Manage your account</a> </p>
+
+                <h3>Welcome to your home inventory, {{ user.first_name}} {{user.last_name}}</h3>
+
+                <table border="1" style="width:40%; margin-left: auto; margin-right: auto;">
+                    <tr>
+                        <th>Category</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Delete</th>
+                        <th>Edit</th>
+
+                    </tr>
+                </table>
+            </article>
+        </div>
+    </div>
+{% endblock %}l
