@@ -61,7 +61,7 @@ class Account(AbstractUser):
 
     class Meta:
         verbose_name = 'Account'
-        verbose_name_plural: 'Accounts'
+        verbose_name_plural = 'Accounts'
 
     def __str__(self):
         return self.username
@@ -76,6 +76,13 @@ class Account(AbstractUser):
 class Category(models.Model):
     category_name = models.CharField(max_length=25)
 
+    class Meta:
+        verbose_name = 'Category'
+        verbose_name_plural = 'Categories'
+
+    def __str__(self):
+        return self.category_name
+
 
 class Item(models.Model):
     item_name = models.CharField(max_length=50)
@@ -86,6 +93,9 @@ class Item(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     price = models.IntegerField()
     date_added = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.item_name
 
     class Meta:
         ordering = ['date_added']

@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm, ReadOnlyPasswordHashField
 from django.contrib.auth import authenticate
 
-from .models import Account
+from .models import Account, Item
 
 
 class RegistrationForm(UserCreationForm):
@@ -88,3 +88,10 @@ class AccountUpdateForm(forms.ModelForm):
             except Account.DoesNotExist:
                 return email
             raise forms.ValidationError('Email "%s" is already taken by another user.' % email)
+
+
+class AddItemForm(forms.ModelForm):
+
+    class Meta:
+        model = Item
+        fields = ['item_name', 'price']

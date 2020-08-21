@@ -10,13 +10,24 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d4af21b-c03c-42e3-b723-3401a798f760" name="Default Changelist" comment="Login, logout, registration fully functional">
-      <change afterPath="$PROJECT_DIR$/inventory/templates/account_management.html" afterDir="false" />
+    <list default="true" id="5d4af21b-c03c-42e3-b723-3401a798f760" name="Default Changelist" comment="Account management implemented">
+      <change afterPath="$PROJECT_DIR$/inventory/templates/registration/password_reset_done.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/templates/registration/password_reset_email.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory/templates/registration/password_reset_subject.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/kali.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/kali.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOMEnVentory/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/HOMEnVentory/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/templates/registration/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/templates/registration/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/templates/account_management.html" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/templates/account_management.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/templates/registration/new_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/templates/registration/password_change.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/templates/registration/new_password_sucessful.html" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/templates/registration/password_change_done.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/templates/registration/reset_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/templates/registration/password_reset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/templates/registration/reset_password_email.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory/templates/registration/reset_sent.html" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/templates/registration/password_reset_complete.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory/templates/user_inventory.html" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/templates/user_inventory.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/views.py" afterDir="false" />
@@ -139,8 +150,18 @@
       <option name="project" value="LOCAL" />
       <updated>1596933795384</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Account management implemented">
+      <created>1597022322010</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1597022322011</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -160,17 +181,18 @@
     <MESSAGE value="Added templates and user creation." />
     <MESSAGE value="Fixed problem with login." />
     <MESSAGE value="Login, logout, registration fully functional" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login, logout, registration fully functional" />
+    <MESSAGE value="Account management implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Account management implemented" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2038" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595175965403">
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
     <state x="2038" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.31.3440.1409@0.31.3440.1409" timestamp="1595175965403" />
-    <state x="562" y="536" width="596" height="402" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595819022011">
+    <state x="562" y="536" width="678" height="402" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597942668630">
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
-    <state x="562" y="536" width="596" height="402" key="#com.intellij.fileTypes.FileTypeChooser/0.31.3440.1409@0.31.3440.1409" timestamp="1595819022011" />
+    <state x="562" y="536" width="678" height="402" key="#com.intellij.fileTypes.FileTypeChooser/0.31.3440.1409@0.31.3440.1409" timestamp="1597942668630" />
     <state x="543" y="470" width="634" height="531" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1595198194486">
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
@@ -191,30 +213,34 @@
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
     <state x="572" y="411" width="576" height="650" key="Github.UntrackedFilesDialog/0.31.3440.1409@0.31.3440.1409" timestamp="1595199018070" />
-    <state width="1922" height="307" key="GridCell.Tab.0.bottom" timestamp="1597021457563">
+    <state width="1687" height="306" key="GridCell.Tab.0.bottom" timestamp="1597964565427">
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
-    <state width="1922" height="307" key="GridCell.Tab.0.bottom/0.31.3440.1409@0.31.3440.1409" timestamp="1597021457563" />
-    <state width="1922" height="307" key="GridCell.Tab.0.center" timestamp="1597021457561">
+    <state width="1687" height="306" key="GridCell.Tab.0.bottom/0.31.3440.1314@0.31.3440.1314" timestamp="1597962628866" />
+    <state width="1687" height="306" key="GridCell.Tab.0.bottom/0.31.3440.1409@0.31.3440.1409" timestamp="1597964565427" />
+    <state width="1687" height="306" key="GridCell.Tab.0.center" timestamp="1597964565416">
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
-    <state width="1922" height="307" key="GridCell.Tab.0.center/0.31.3440.1409@0.31.3440.1409" timestamp="1597021457561" />
-    <state width="1922" height="307" key="GridCell.Tab.0.left" timestamp="1597021457560">
+    <state width="1687" height="306" key="GridCell.Tab.0.center/0.31.3440.1314@0.31.3440.1314" timestamp="1597962628864" />
+    <state width="1687" height="306" key="GridCell.Tab.0.center/0.31.3440.1409@0.31.3440.1409" timestamp="1597964565416" />
+    <state width="1687" height="306" key="GridCell.Tab.0.left" timestamp="1597964565410">
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
-    <state width="1922" height="307" key="GridCell.Tab.0.left/0.31.3440.1409@0.31.3440.1409" timestamp="1597021457560" />
-    <state width="1922" height="307" key="GridCell.Tab.0.right" timestamp="1597021457562">
+    <state width="1687" height="306" key="GridCell.Tab.0.left/0.31.3440.1314@0.31.3440.1314" timestamp="1597962628862" />
+    <state width="1687" height="306" key="GridCell.Tab.0.left/0.31.3440.1409@0.31.3440.1409" timestamp="1597964565410" />
+    <state width="1687" height="306" key="GridCell.Tab.0.right" timestamp="1597964565419">
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
-    <state width="1922" height="307" key="GridCell.Tab.0.right/0.31.3440.1409@0.31.3440.1409" timestamp="1597021457562" />
-    <state x="455" y="470" width="810" height="531" key="Vcs.Push.Dialog.v2" timestamp="1595816411594">
+    <state width="1687" height="306" key="GridCell.Tab.0.right/0.31.3440.1314@0.31.3440.1314" timestamp="1597962628864" />
+    <state width="1687" height="306" key="GridCell.Tab.0.right/0.31.3440.1409@0.31.3440.1409" timestamp="1597964565419" />
+    <state x="455" y="470" width="810" height="531" key="Vcs.Push.Dialog.v2" timestamp="1597024613924">
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
-    <state x="455" y="470" width="810" height="531" key="Vcs.Push.Dialog.v2/0.31.3440.1409@0.31.3440.1409" timestamp="1595816411594" />
-    <state x="635" y="648" width="450" height="175" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596933803516">
+    <state x="455" y="470" width="810" height="531" key="Vcs.Push.Dialog.v2/0.31.3440.1409@0.31.3440.1409" timestamp="1597024613924" />
+    <state x="635" y="648" width="450" height="175" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597022427240">
       <screen x="0" y="31" width="3440" height="1409" />
     </state>
-    <state x="635" y="648" width="450" height="175" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.31.3440.1409@0.31.3440.1409" timestamp="1596933803516" />
+    <state x="635" y="648" width="450" height="175" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.31.3440.1409@0.31.3440.1409" timestamp="1597022427240" />
     <state x="640" y="352" width="672" height="678" key="search.everywhere.popup" timestamp="1597014852583">
       <screen x="0" y="31" width="3440" height="1409" />
     </state>

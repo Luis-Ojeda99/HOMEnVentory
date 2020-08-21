@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.forms import UserCreationForm
-from .forms import RegistrationForm, AccountAuthenticationForm, AccountUpdateForm
-from .models import Item
+from .forms import RegistrationForm, AccountAuthenticationForm, AccountUpdateForm, AddItemForm
+from .models import Item, Category, Account
 
 
 # Create your views here.
@@ -46,13 +46,30 @@ def about_view(request):
 
 def user_inventory(request):
 
-    if not request.user.is_authenticated:
+    user = request.user
+
+    if not user.is_authenticated:
         return redirect("login")
 
     context = {}
-
     items = Item.objects.filter(owner=request.user)
+    categories = Category.objects.all()
+    context['categories'] = categories
     context['items'] = items
+    form = AddItemForm(request.POST or None)
+    if request.POST:
+        if form.is_valid():
+            obj = form.save(commit=False)
+            category = request.POST.get('category', None)
+            cat = Category.objects.filter(category_name=category).first
+            obj.category = cat
+            owner = Account.objects.filter(username=user.username).first()
+            obj.owner = owner
+            obj.save()
+            context['success_message'] = 'The item was added successfully!'
+
+    context['add_item_form'] = form
+
     return render(request, 'user_inventory.html', context)
 
 
@@ -86,8 +103,14 @@ def account_management_view(request):
     if request.POST:
         form = AccountUpdateForm(request.POST, instance=request.user)
         if form.is_valid():
+            form.initial = {
+                "username": request.POST['username'],
+                "email": request.POST['email'],
+                "first_name": request.POST['first_name'],
+                "last_name": request.POST['last_name']
+            }
             form.save()
-            context['Success_message'] = 'Your account has been updated.'
+            context['success_message'] = 'Your account has been updated.'
     else:  # GET request.
         form = AccountUpdateForm(
             initial={
@@ -101,9 +124,3 @@ def account_management_view(request):
     context['account_form'] = form
 
     return render(request, "account_management.html", context)
-
-
-def new_password_view(request):
-
-    context = {}
-    return render(request, "new_password.html", context)
