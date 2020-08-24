@@ -10,6 +10,7 @@ urlpatterns = [
     path('logout/', views.logout_view, name='logout'),
     path('user-inventory/', views.user_inventory, name='user-inventory'),
     path('account-management/', views.account_management_view, name="account-management"),
+    path('deactivate_account/', views.deactivate_account_view, name="deactivate_account"),
 
     # Password reset links (Reference: https://github.com/django/django/blob/master/django/contrib/auth/views.py)
     path('password_change/', auth_views.PasswordChangeView.as_view(template_name='registration/password_change.html'),
@@ -22,7 +23,9 @@ urlpatterns = [
     path('password_reset/done/',
          auth_views.PasswordResetCompleteView.as_view(template_name='registration/password_reset_done.html'),
          name='password_reset_done'),
-    path('reset/<uidb64>/<token>', auth_views.PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
+    path('reset/<uidb64>/<token>',
+         auth_views.PasswordResetConfirmView.as_view(template_name='registration/password_reset_confirm'),
+         name='password_reset_confirm'),
     path('reset/done/',
          auth_views.PasswordResetCompleteView.as_view(template_name='registration/password_reset_complete.html'),
          name='password_reset_complete')

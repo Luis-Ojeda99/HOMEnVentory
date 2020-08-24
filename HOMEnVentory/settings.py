@@ -31,7 +31,6 @@ if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # During development only.
 
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -130,8 +129,15 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Allow sending emails to the console
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 LOGIN_REDIRECT_URL = '/'
 
-
+# Send emails from the application.
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'homenventoryojeda@gmail.com'
+EMAIL_HOST_PASSWORD = 'nibwizuporkkdbur'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'HOMEnVentory Team <noreply@homenventoryojeda.com>'

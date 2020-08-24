@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib import messages
 from .forms import RegistrationForm, AccountAuthenticationForm, AccountUpdateForm, AddItemForm
 from .models import Item, Category, Account
 
@@ -12,7 +12,8 @@ def index_view(request):
 
 def logout_view(request):
     logout(request)
-    return render(request, 'registration/logged_out.html')
+    messages.success(request, 'You have logout successfully')
+    return redirect('index')
 
 
 def login_view(request):
@@ -124,3 +125,14 @@ def account_management_view(request):
     context['account_form'] = form
 
     return render(request, "account_management.html", context)
+
+
+def deactivate_account_view(request):
+
+    user = request.user
+    user.is_active = False
+    user.save()
+    logout(request)
+    messages.success(request, 'Your account has been successfully disabled. Contact an admin should you want to '
+                              'activate it again.')
+    return redirect('index')

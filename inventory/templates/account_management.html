@@ -3,12 +3,9 @@
 {% block title %}Manage Account {% endblock %}
 
 {% block content %}
-
     <div class="container">
             <div class="card bg-light">
                 <article class="card-body mx-auto" style="max-width: 400px;">
-
-
                     <form class="form-singin" method="post">
                         {% csrf_token %}
                         <h3 class="card-title mt-3 text-center">Manage account</h3>
@@ -76,6 +73,10 @@
                     <br />
                     <div class="d-flex flex-column">
                         <a class="m-auto" href="{% url 'password_change' %}">Change password</a>
+                    </div>
+
+                    <div class="d-flex flex-column">
+                        <a class="m-auto" href="{% url 'deactivate_account' %}">Deactivate your account</a>
                     </div>
                 </article>
             </div>
