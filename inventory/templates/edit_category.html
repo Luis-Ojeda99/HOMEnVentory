@@ -1,0 +1,45 @@
+{% extends 'base.html'%}
+
+{% block title %}Edit Item {% endblock %}
+
+{% block content %}
+    <div class="container">
+        <article class="card-body mx-auto" style="max-width: 400px;">
+            <form class="form-singin" method="post">
+                {% csrf_token %}
+                <h3 class="card-title mt-3 text-center">Edit {{edit_category_form.initial.category_name}} information</h3>
+
+                <p class="text-center"><a href="{% url 'manage_categories'%}">Manage all categories</a></p>
+                <br />
+                <div class="form-group input-group text-center">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-home"></i> </span>
+                    </div>
+                    <input type="text" name="category_name" id="categoryName" class="form-control" required
+                           placeholder="Category name" value="{{edit_category_form.initial.category_name}}" />
+                </div>
+
+                {% for field in category %}
+                    <p>
+                        {% for error in field.errors %}
+                        <p style="color: red">{{ error }}</p>
+                        {% endfor %}
+                    </p>
+                {% endfor %}
+
+                {% if edit_category_form.non_field_errors %}
+                    <div style="color: red">
+                        <p>{{edit_category_form.non_field_errors}}</p>
+                    </div>
+                {% endif %}
+
+                {% for message in messages %}
+                    <div {% if message.tags %} class="{{ message.tags }}" style="color:green; text-align: center;"
+                         {% endif %}>{{ message }}</div>
+                {% endfor %}
+
+                <button class="btn btn-primary btn-block" type="submit">Edit</button>
+            </form>
+        </article>
+    </div>
+{% endblock %}

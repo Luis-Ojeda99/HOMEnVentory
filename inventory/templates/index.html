@@ -3,18 +3,16 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-   <div class="container-fluid">
-       <div class="row">
+   <div class="container">
+       <br>
+       <div>
            <h1>Welcome!</h1>
-        <BR><br>
-            {% if messages %}
+        <BR>
 
-                <ul class="messages">
-                    {% for message in messages %}
-                        <li {% if message.tags %} class="{{ message.tags}}" style="color:green; text-align: center;" {% endif %}>{{message}}</li>
-                    {% endfor %}
-                </ul>
-           {% endif %}
+           {% for message in messages %}
+                <p {% if message.tags %} class="{{ message.tags }}" style="color:green; text-align: center;" {% endif %}>{{ message }}</p>
+           {% endfor %}
+
        </div>
    </div>
 

@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm, ReadOnlyPasswordHashField
 from django.contrib.auth import authenticate
 
-from .models import Account, Item
+from .models import Account, Item, Category
 
 
 class RegistrationForm(UserCreationForm):
@@ -62,14 +62,15 @@ class AccountAuthenticationForm(forms.ModelForm):
             username = self.cleaned_data['username']
             password = self.cleaned_data['password']
             if not authenticate(username=username, password=password):
-                raise forms.ValidationError("Invalid credentials. Check your username and password.")
+                raise forms.ValidationError("Invalid credentials. Check your username and password.\n"
+                                            "If you account is deactivated, contact an admin to activate again.")
 
 
 class AccountUpdateForm(forms.ModelForm):
 
     class Meta:
         model = Account
-        fields = ('username', 'email', 'first_name', 'last_name')
+        fields = ('username', 'email', 'first_name', 'last_name', 'is_active')
 
     def clean_username(self):
         if self.is_valid():
@@ -95,3 +96,33 @@ class AddItemForm(forms.ModelForm):
     class Meta:
         model = Item
         fields = ['item_name', 'price']
+
+
+class EditItemForm(forms.ModelForm):
+
+    class Meta:
+        model = Item
+        fields = ('item_name', 'price')
+
+
+class AddCategoryForm(forms.ModelForm):
+
+    class Meta:
+        model = Category
+        fields = ['category_name']
+
+    def clean_category_name(self):
+        if self.is_valid():
+            category_name = self.cleaned_data['category_name']
+            try:
+                Category.objects.exclude(pk=self.instance.pk).get(category_name=category_name)
+            except Category.DoesNotExist:
+                return category_name
+            raise forms.ValidationError(' "%s" category is already in the database.' % category_name)
+
+
+class EditCategoryForm(forms.ModelForm):
+
+    class Meta:
+        model = Category
+        fields = ['category_name']

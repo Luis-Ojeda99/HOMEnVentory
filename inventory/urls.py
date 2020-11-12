@@ -4,13 +4,21 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('', views.index_view, name='index'),
-    path('about/', views.about_view, name='about'),
     path('register/', views.register_view, name='register'),
     path('login/', views.login_view, name='login'),
     path('logout/', views.logout_view, name='logout'),
-    path('user-inventory/', views.user_inventory, name='user-inventory'),
-    path('account-management/', views.account_management_view, name="account-management"),
+    path('user_inventory/', views.user_inventory, name='user_inventory'),
+    path('edit_item/<str:pk>', views.edit_item_view, name='edit_item'),
+    path('delete_item/<str:pk>', views.delete_item_view, name='delete_item'),
+    path('account_management/', views.account_management_view, name="account_management"),
     path('deactivate_account/', views.deactivate_account_view, name="deactivate_account"),
+    path('admin_management/', views.admin_management_view, name="admin_management"),
+    path('manage_categories/', views.manage_categories_view, name='manage_categories'),
+    path('edit_category/<str:pk>/', views.edit_category_view, name='edit_category'),
+    path('delete_account/<str:pk>/', views.delete_account_view, name='delete_account'),
+    path('admin_update_user/<str:pk>/', views.admin_update_user_view, name='admin_update_user'),
+    path('admin_deactivate_user/<str:pk>/', views.admin_deactivate_user_view, name='admin_deactivate_user'),
+    path('admin_activate_user/<str:pk>/', views.admin_activate_user_view, name='admin_activate_user'),
 
     # Password reset links (Reference: https://github.com/django/django/blob/master/django/contrib/auth/views.py)
     path('password_change/', auth_views.PasswordChangeView.as_view(template_name='registration/password_change.html'),
