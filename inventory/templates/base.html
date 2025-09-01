@@ -4,13 +4,11 @@
     {% load static%}
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
     <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    {% load bootstrap4 %}
+    {% load django_bootstrap5 %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
-
-    {% load fontawesome %}
-    {% fontawesome_stylesheet %}
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta charset="UTF-8">
