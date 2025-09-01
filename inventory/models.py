@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.contrib.auth import get_user_model
 
-
 class AccountManager(BaseUserManager):
 
     def create_user(self, email, username, first_name, last_name, password):
