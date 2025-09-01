@@ -61,19 +61,32 @@ def admin_management_view(request):
     accounts = Account.objects.all()
     context['accounts'] = accounts
 
+    return render(request, "admin/admin_management.html", context)
+
+def admin_add_user_view(request):
+    context = {}
+
+    user = request.user
+
+    if not user.is_authenticated:
+        return redirect("login")
+
+    if not user.is_admin:
+        return redirect("user_inventory")
+
     if request.POST and 'save_user' in request.POST:
         form = RegistrationForm(request.POST)
         if form.is_valid():
             form.save()
             messages.success(request, 'User added successfully.')
+            return redirect('admin_management') 
         else:
             context['registration_form'] = form
     else:
         form = RegistrationForm()
         context['registration_form'] = form
 
-    return render(request, "admin_management.html", context)
-
+    return render(request, "admin/admin_add_user.html", context)
 
 def user_inventory(request):
     context = {}
@@ -238,7 +251,7 @@ def admin_update_user_view(request, pk):
         )
 
     context['account_form'] = form
-    return render(request, 'admin_update_user.html', context)
+    return render(request, 'admin/admin_update_user.html', context)
 
 
 def edit_item_view(request, pk):

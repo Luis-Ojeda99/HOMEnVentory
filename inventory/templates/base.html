@@ -32,7 +32,11 @@
             {% if request.user.is_authenticated %}
                 <form class="form-inline my-2 my-lg-0">
                     <a class="btn btn-outline-light" href="{% url 'account_management' %}" >Account</a>&nbsp;
-                    <a class="btn btn-outline-light" href="{% url 'user_inventory' %} ">Inventory</a>&nbsp;
+                    {% if request.user.is_admin %}
+                        <a class="btn btn-outline-light" href="{% url 'admin_management' %}">Admin</a>&nbsp;
+                    {% else %}
+                        <a class="btn btn-outline-light" href="{% url 'user_inventory' %}">Inventory</a>&nbsp;
+                    {% endif %}
                     <a class ="btn btn-outline-light" href="{% url 'logout'%}" >Logout</a>
                 </form>
             {% else %}

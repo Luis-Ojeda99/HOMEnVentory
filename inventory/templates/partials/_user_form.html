@@ -1,0 +1,56 @@
+<!-- Full user form with conditional logic -->
+<div class="form-group input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+    </div>
+    <input type="text" name="username" 
+       class="{% if readonly_username %}form-control-plaintext{% else %}form-control{% endif %}" 
+       id="inputUsername" placeholder="Username" required
+       {% if readonly_username %}readonly value="{{ username_value }}" style="text-indent: 1em;"{% endif %}
+       {% if not readonly_username and username_value %}value="{{ username_value }}"{% endif %}>
+</div>
+
+<div class="form-group input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-envelope"></i></span>
+        <input type="email" name="email" id="inputEmail" class="form-control"
+               placeholder="Email address" required
+               {% if email_value %}value="{{ email_value }}"{% endif %}>
+    </div>
+</div>
+
+<div class="form-group input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-address-card"></i></span>
+        <input type="text" name="first_name" id="inputFirstName" class="form-control"
+               placeholder="First name" required
+               {% if first_name_value %}value="{{ first_name_value }}"{% endif %}>
+    </div>
+</div>
+
+<div class="form-group input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-id-card"></i></span>
+        <input type="text" name="last_name" id="inputLastName" class="form-control"
+               placeholder="Last name" required
+               {% if last_name_value %}value="{{ last_name_value }}"{% endif %}>
+    </div>
+</div>
+
+{% if show_password_fields %}
+<div class="form-group input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-lock"></i></span>
+        <input type="password" name="password1" id="inputPassword1" class="form-control"
+               placeholder="Password" required>
+    </div>
+</div>
+
+<div class="form-group input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-lock"></i></span>
+        <input type="password" name="password2" id="inputPassword2" class="form-control"
+               placeholder="Confirm password" required>
+    </div>
+</div>
+{% endif %}

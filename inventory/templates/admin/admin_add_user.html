@@ -1,0 +1,43 @@
+{% extends 'base.html'%}
+
+{% block content%}
+    <div class="container">
+        <div class="card bg-light">
+            <article class="card-body mx-auto" style="max-width: 400px;">
+                <h2 class="card-title mt-3 text-center">Add New User</h2>
+                
+                <p class="text-center">
+                    <a href="{% url 'admin_management' %}">← Back to User Management</a>
+                </p>
+                <br />
+
+                <form class="add-form" method="post">
+                    {% csrf_token %}
+                    
+                    {% include 'partials/_user_form.html' with show_password_fields=True readonly_username=False %}
+
+                    {% for field in registration_form %}
+                        <p>
+                            {% for error in field.errors %}
+                                <p style="color: red">{{ error }}</p>
+                            {% endfor %}
+                        </p>
+                    {% endfor %}
+
+                    {% if registration_form.non_field_errors %}
+                        <div style="color: red">
+                            <p>{{registration_form.non_field_errors}}</p>
+                        </div>
+                    {% endif %}
+
+                    <button class="btn btn-lg btn-success btn-block" name="save_user" type="submit">Create User</button>
+                    <a href="{% url 'admin_management' %}" class="btn btn-secondary btn-block">Cancel</a>
+                </form>
+
+                {% for message in messages %}
+                    <div {% if message.tags %} class="{{ message.tags }}" style="color:green; text-align: center;" {% endif %}>{{ message }}</div>
+                {% endfor %}
+            </article>
+        </div>
+    </div>
+{% endblock %}

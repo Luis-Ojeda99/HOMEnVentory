@@ -10,37 +10,8 @@
 
                 <p class="text-center"><a href="{% url 'admin_management' %}">Manage all users</a> </p>
                 <br />
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-                    </div>
-                    <input type="text" readonly name="username" class="form-control-plaintext" id="inputUsername" required
-                           placeholder="Username"  value="&nbsp;&nbsp;&nbsp;{{account_form.initial.username}}">
-                </div>
-
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-envelope"></i></span>
-                        <input type="email" name="email" id="inputEmail" class="form-control" required
-                               placeholder="Email address"  value="{{account_form.initial.email}}" />
-                    </div>
-                </div>
-
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-address-card"></i></span>
-                        <input type="text" name="first_name" id="inputFirstName" class="form-control" required
-                               placeholder="First name"  value="{{account_form.initial.first_name}}" />
-                    </div>
-                </div>
-
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-id-card "></i></span>
-                        <input type="text" name="last_name" id="inputLastName" class="form-control" required
-                               placeholder="Last name"  value="{{account_form.initial.last_name}}" />
-                    </div>
-                </div>
+                
+                {% include 'partials/_user_form.html' with readonly_username=True show_password_fields=False username_value=account_form.initial.username email_value=account_form.initial.email first_name_value=account_form.initial.first_name last_name_value=account_form.initial.last_name %}
 
                 {% for field in account_form %}
                     <p>
