@@ -16,7 +16,7 @@
                         <span class="input-group-text"> <i class="fa fa-home"></i> </span>
                     </div>
                     <input type="text" name="category_name" id="categoryName" class="form-control" required
-                           placeholder="Category name" value="{{edit_category_form.initial.category_name}}" />
+                        placeholder="Category name" value="{{edit_category_form.initial.category_name}}" />
                 </div>
 
                 {% for field in category %}
@@ -35,7 +35,7 @@
 
                 {% for message in messages %}
                     <div {% if message.tags %} class="{{ message.tags }}" style="color:green; text-align: center;"
-                         {% endif %}>{{ message }}</div>
+                        {% endif %}>{{ message }}</div>
                 {% endfor %}
 
                 <button class="btn btn-primary btn-block" type="submit">Edit</button>
