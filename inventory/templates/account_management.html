@@ -16,12 +16,13 @@
                     <h5>Edit your account information</h5>
 
                     <br />
-                    <div class="form-group input-group">
+                    <div class="form-group-plaintext input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                         </div>
-                        <input type="text" readyonly name="username" class="form-control-plaintext" id="inputUsername"
-                                   placeholder="Username" required  value="&nbsp;&nbsp;&nbsp;{{account_form.initial.username}}">
+                        <input type="text" readonly name="username"
+                            class="form-control" id="inputUsername"
+                            placeholder="Username" required  value="{{account_form.initial.username}}">
                     </div>
 
                     <div class="form-group input-group">

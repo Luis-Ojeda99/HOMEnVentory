@@ -314,7 +314,7 @@ def manage_categories_view(request):
 
     context['add_category_form'] = form
 
-    return render(request, "manage_categories.html", context)
+    return render(request, "admin/manage_categories.html", context)
 
 
 def edit_category_view(request, pk):
