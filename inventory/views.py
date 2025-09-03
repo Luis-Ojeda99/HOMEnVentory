@@ -180,8 +180,7 @@ def deactivate_account_view(request):
     user.is_active = False
     user.save()
     logout(request)
-    messages.success(request, 'Your account has been successfully disabled. Contact an admin should you want to '
-                              'activate it again.')
+    messages.success(request, 'Your account has been successfully disabled. Contact an admin should you want to activate it again.')
     return redirect('index')
 
 
@@ -212,6 +211,13 @@ def delete_account_view(request, pk):
         messages.success(request, 'User deleted successfully.')
         return redirect('admin_management')
 
+
+def delete_category_view(request, pk):
+    category = Category.objects.get(category_name=pk)
+    if request.method == "POST":
+        category.delete()
+        messages.success(request, 'Category deleted successfully.')
+        return redirect('manage_categories')
 
 def delete_item_view(request, pk):
     item = Item.objects.get(id=pk)
