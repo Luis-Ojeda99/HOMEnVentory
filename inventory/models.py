@@ -98,6 +98,3 @@ class Item(models.Model):
 
     class Meta:
         ordering = ['date_added']
-
-        def __unicode__(self):
-            return u'%s'% self.item_name
